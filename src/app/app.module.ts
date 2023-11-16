@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { CardViewComponent } from './card-view/card-view.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardViewComponent
   ],
   imports: [
     BrowserModule,
