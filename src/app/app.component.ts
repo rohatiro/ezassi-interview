@@ -11,7 +11,6 @@ export class AppComponent {
 
   onScroll() {
     this.cards += this.padd;
-    console.log(this.cards);
   }
 
   arraySpaces(): Array<null> {
