@@ -1,0 +1,76 @@
+<div 
+  infinite-scroll
+  [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="500"
+  (scrolled)="onScroll()"
+  class="container-fluid py-4 d-flex flex-column gap-5">
+  <div
+    class="card shadow"
+    *ngFor="let card of arraySpaces() ">
+    <div class="card-fixed-header d-flex px-3">
+      <div class="card-over-icon d-flex justify-content-center align-items-center rounded shadow">
+        <i class="bi bi-lightbulb"></i>
+      </div>
+      <div class="card-clipboard px-4 py-2">
+        <i class="bi bi-clipboard-fill"></i>
+      </div>
+    </div>
+    <div class="card-body px-5">
+      <div class="row">
+        <div class="col-12 col-sm-4 pb-2 pb-sm-0">
+          <img class="w-100 object-fit-cover rounded shadow" src="/assets/card_img.png" alt="card image">
+        </div>
+        <div class="col-12 col-sm-8">
+          <div class="d-flex flex-column align-items-center align-items-sm-end">
+            <div class="card-user d-flex gap-2">
+              <span>Posted <a class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/"><strong>Anonymous User</strong></a></span>
+              <div class="card-rating d-flex gap-1">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <span>()</span>
+            </div>
+            <div class="card-date d-flex gap-2">
+              <i class="bi bi-calendar3"></i>
+              <span>June 27, 2019 12:00 PM</span>
+            </div>
+          </div>
+          <div class="card-summary d-flex justify-content-center justify-content-sm-start py-2">
+            Idea Summary
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card-info d-sm-flex gap-sm-4 flex-sm-row-reverse justify-content-sm-end px-5 py-3">
+            <div class="card-info-block text-center text-sm-start">
+              <div class="card-info-block-header">
+                <strong>Review Score</strong>
+              </div>
+              <div class="card-info-block-body">
+                <span class="badge rounded-pill text-bg-warning text-white">---</span>
+              </div>
+            </div>
+            <div class="card-info-block text-center text-sm-start">
+              <div class="card-info-block-header">
+                <strong>Workflow <i class="bi bi-pencil-fill"></i></strong>
+              </div>
+              <div class="card-info-block-body">
+                <a class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/">Idea Preview/PLM II</a>
+              </div>
+            </div>
+            <div class="card-info-block text-center text-sm-start">
+              <div class="card-info-block-header">
+                <strong>Assignees</strong>
+              </div>
+              <div class="card-info-block-body">
+                <a class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/">Assignees</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
